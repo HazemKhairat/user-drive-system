@@ -1,0 +1,59 @@
+body 
+{
+    background-color: blanchedalmond;
+}
+header
+{
+    background-color:cadetblue;
+    color: aliceblue;
+    padding-right: 20px;
+    padding-bottom: 7px;
+    padding-top: 5px;
+}
+#headerdiv
+{
+    text-align: right;
+}
+h1
+{
+    text-align: center;
+}
+#hh ul li
+{
+    list-style-type: none;
+    background-color: chocolate;
+    color: aliceblue;
+    font-size: 25px;
+    width: 30%;
+    height: 18px;
+    display: inline-table;
+    text-align: center;
+    padding: 15px;
+}
+h2{
+    color:brown;
+    background-color: azure;
+    padding: 7px;
+}
+img
+{
+    height: 400px;
+    width: 400px;
+
+}
+video
+{
+    height: 400px;
+    width: 400px;
+}
+footer
+{
+    background-color: cadetblue;
+    height: 17px;
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 30px;
+}
