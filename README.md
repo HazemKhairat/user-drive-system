@@ -29,6 +29,7 @@ This project demonstrates the use of Laravel features, including Breeze for logi
 </table>
 
 ## Suber Admin Access All users - otherwise error 403(not authrized)
+📌 **NOTE:** The "All Users" section is included here for illustration purposes in the README but should be hidden from ordinary users.
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/5a668daf-7613-40cd-a1f6-cfc3824d592e" /></td>
