@@ -1,10 +1,20 @@
-# About the Project
+# 📁 About the Project
 
-This project demonstrates the use of Laravel features, including Breeze for login and registration, and implements core Authentication and Authorization concepts. The application allows users to upload their files securely, as well as view or download public files shared by other users. This setup provides a foundation for managing user access and permissions effectively in a web application.
+This project demonstrates the use of **Laravel** features, including **Breeze** for login and registration.  
+It implements core **Authentication** and **Authorization** concepts.
 
-# Project Screenshots
+Users can:
+- Securely **upload files**
+- **View and download public files** shared by others
+- Manage **access and permissions** effectively
 
-## Login and Registration Screens
+This setup provides a strong foundation for building secure, user-based file management systems.
+
+---
+
+# 📸 Project Screenshots
+
+## 🔐 Login and Registration
 
 <table>
   <tr>
@@ -13,7 +23,10 @@ This project demonstrates the use of Laravel features, including Breeze for logi
   </tr>
 </table>
 
-## List Drives – View and Download Public Files
+---
+
+## 📂 List Drives – View and Download Public Files
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/ac97d20c-179d-45d3-a694-ef73f34de815" /></td>
@@ -21,15 +34,22 @@ This project demonstrates the use of Laravel features, including Breeze for logi
   </tr>
 </table>
 
-## Full Control Over Your Files – View-Only Access to Other Users’ Public Drives
+---
+
+## ✅ Full Control Over Your Files – View-Only Access to Public Drives of Other Users
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/d95b1253-79d6-4e2b-949c-ad16a28df037" /></td>
   </tr>
 </table>
 
-## Suber Admin Access All users - otherwise error 403(not authrized)
-📌 **NOTE:** The "All Users" section is included here for illustration purposes in the README but should be hidden from ordinary users.
+---
+
+## 🛡 Super Admin – View All Users (403 Error for Unauthorized Access)
+
+📌 **NOTE:** The "All Users" section is only visible to super admins and will return a **403 – Unauthorized** error for regular users.
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/5a668daf-7613-40cd-a1f6-cfc3824d592e" /></td>
