@@ -1,14 +1,14 @@
 # 📁 About the Project
 
-This project demonstrates the use of **Laravel** features, including **Breeze** for login and registration.  
-It implements core **Authentication** and **Authorization** concepts.
+This project demonstrates the use of **Laravel 10** features, including **Breeze** for authentication scaffolding.  
+It implements core concepts of **Authentication** and **Authorization** in a user-based file management system.
 
-Users can:
+### 🔑 Users can:
 - Securely **upload files**
 - **View and download public files** shared by others
 - Manage **access and permissions** effectively
 
-This setup provides a strong foundation for building secure, user-based file management systems.
+This setup provides a strong foundation for building secure, user-role-based file systems.
 
 ---
 
@@ -40,7 +40,7 @@ This setup provides a strong foundation for building secure, user-based file man
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/d95b1253-79d6-4e2b-949c-ad16a28df037" /></td>
+    <td><img src="https://github.com/user-attachments/assets/d95b1253-79d6-4e2b-949c-ad16a28df037"/></td>
   </tr>
 </table>
 
