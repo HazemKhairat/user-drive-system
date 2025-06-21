@@ -18,8 +18,18 @@ This setup provides a strong foundation for building secure, user-role-based fil
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/30546da2-baec-4373-8750-c6b6525d5c85" alt="Login Screen" /></td>
-    <td><img src="https://github.com/user-attachments/assets/d2572589-4cc9-466c-961f-918381f661e0" alt="Registration Screen" /></td>
+    <td><img src="https://github.com/user-attachments/assets/600693be-b64b-49a7-bbe8-0227c7c913c3" alt="Login Screen" /></td>
+    <td><img src="https://github.com/user-attachments/assets/ec84365a-0446-4021-b52e-265417e89714" alt="Registration Screen" /></td>
+  </tr>
+</table>
+
+---
+
+## Dashboard
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/2a0951e7-8203-4581-a903-5393206d5d74"/></td>
   </tr>
 </table>
 
@@ -29,30 +39,11 @@ This setup provides a strong foundation for building secure, user-role-based fil
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/ac97d20c-179d-45d3-a694-ef73f34de815" /></td>
-    <td><img src="https://github.com/user-attachments/assets/b268d528-9354-40db-8b27-2adf70ab194c" /></td>
+    <td><img src="https://github.com/user-attachments/assets/3fdfe030-35a3-4e29-bf1f-d80fc8eb8412" /></td>
+    <td><img src="https://github.com/user-attachments/assets/264de48c-759f-4b1d-bfbe-d9db68a2618d" /></td>
   </tr>
 </table>
 
 ---
 
-## ✅ Full Control Over Your Files – View-Only Access to Public Drives of Other Users
 
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/d95b1253-79d6-4e2b-949c-ad16a28df037"/></td>
-  </tr>
-</table>
-
----
-
-## 🛡 Super Admin – View All Users (403 Error for Unauthorized Access)
-
-📌 **NOTE:** The "All Users" section is only visible to super admins and will return a **403 – Unauthorized** error for regular users.
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/5a668daf-7613-40cd-a1f6-cfc3824d592e" /></td>
-    <td><img src="https://github.com/user-attachments/assets/f15ac89a-1640-49c0-ba0e-df2fcf76ca42" /></td>
-  </tr>
-</table>
