@@ -1,30 +1,43 @@
 # 📁 MyDrive – Laravel-Based File Management System
 
-MyDrive is a Laravel 10 web application that enables users to **upload**, **manage**, and **share files** securely.  
-Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanctum** for API token management, this project demonstrates the core concepts of **authentication**, **authorization**, and **role-based access control**.
+**MyDrive** is a full-stack file management web application built with **Laravel 10**, offering secure file **uploading**, **management**, and **sharing**.  
+It implements robust **authentication**, **authorization**, and **role-based access control** using **Laravel Breeze** and **Laravel Sanctum**.
 
-> 🔗 **API Documentation:** [View on SwaggerHub](https://app.swaggerhub.com/apis-docs/hazemkhairat-426/DriveApi/1.0.0)
+> 🔗 **API Documentation**: [Explore on SwaggerHub](https://app.swaggerhub.com/apis-docs/hazemkhairat-426/DriveApi/1.0.0)
 
 ---
 
-## 👥 Key Features
+## 🚀 Tech Stack
 
-- 🔐 User authentication (Laravel Breeze)
-- 📄 Upload and manage personal files
-- 🌍 View and download **public files** shared by others
-- 🔒 Private file protection with role-based access
-- 👤 Roles: Super Admin, Sub Admin, User
-- 📊 Simple dashboard summarizing user activity
-- 🔍 Search, filter, pagination, and status toggling
-- 📱 Responsive and user-friendly UI using **Bootstrap** and **Blade**
-- 🔐 API authentication using **Laravel Sanctum**
-- 📬 API testing with **Postman**
-- 📝 API documentation with **Swagger**
+- **Laravel 10** – Backend Framework
+- **Laravel Breeze** – Authentication
+- **Laravel Sanctum** – API Token Management
+- **Blade** – Templating Engine
+- **Bootstrap 5** – Responsive UI
+- **Postman** – API Testing
+- **Swagger** – API Documentation
+
 ---
 
-## 🗄️ Screenshots
+## 🔑 Key Features
 
-### 🔐 Login & Registration
+- 🔐 User authentication & registration (Laravel Breeze)
+- 📤 Upload, manage, and delete personal files
+- 🌍 View and download publicly shared files
+- 🔒 Role-based file access (Super Admin, Sub Admin, User)
+- 📊 Simple dashboard with file stats
+- 🔎 Search, filter, pagination, and file visibility toggling
+- 📱 Clean, responsive UI (Bootstrap + Blade)
+- 🔐 Secure API access via Laravel Sanctum
+- 🧪 API tested with Postman
+- 📘 API documented using Swagger/OpenAPI 3
+
+---
+
+## 📸 Screenshots
+
+### 🔐 Authentication Screens
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/600693be-b64b-49a7-bbe8-0227c7c913c3" alt="Login Screen" width="100%"/></td>
@@ -35,6 +48,7 @@ Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanct
 ---
 
 ### 📊 Dashboard Overview
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/2a0951e7-8203-4581-a903-5393206d5d74" alt="Dashboard" width="100%"/></td>
@@ -44,6 +58,7 @@ Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanct
 ---
 
 ### 📂 Drive Listing – Public Files
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/3fdfe030-35a3-4e29-bf1f-d80fc8eb8412" alt="Drive List" width="100%"/></td>
@@ -52,3 +67,6 @@ Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanct
 </table>
 
 ---
+
+## 🧩 Project Structure
+
