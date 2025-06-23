@@ -17,8 +17,9 @@ Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanct
 - 📊 Simple dashboard summarizing user activity
 - 🔍 Search, filter, pagination, and status toggling
 - 📱 Responsive and user-friendly UI using **Bootstrap** and **Blade**
-- ✨ API authentication using **Laravel Sanctum**
-
+- 🔐 API authentication using **Laravel Sanctum**
+- 📬 API testing with **Postman**
+- 📝 API documentation with **Swagger**
 ---
 
 ## 🗄️ Screenshots
