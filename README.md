@@ -1,50 +1,53 @@
-# 📁 About the Project
+# 📁 MyDrive – Laravel-Based File Management System
 
-This project demonstrates the use of **Laravel 10** features, including **Breeze** for authentication scaffolding.  
-It implements core concepts of **Authentication** and **Authorization** in a user-based file management system.
+MyDrive is a Laravel 10 web application that enables users to **upload**, **manage**, and **share files** securely.  
+Built with **Laravel Breeze** for authentication scaffolding and **Laravel Sanctum** for API token management, this project demonstrates the core concepts of **authentication**, **authorization**, and **role-based access control**.
 
-### 🔑 Users can:
-- Securely **upload files**
-- **View and download public files** shared by others
-- Manage **access and permissions** effectively
-
-This setup provides a strong foundation for building secure, user-role-based file systems.
+> 🔗 **API Documentation:** [View on SwaggerHub](https://app.swaggerhub.com/apis-docs/hazemkhairat-426/DriveApi/1.0.0)
 
 ---
 
-# 📸 Project Screenshots
+## 👥 Key Features
 
-## 🔐 Login and Registration
+- 🔐 User authentication (Laravel Breeze)
+- 📄 Upload and manage personal files
+- 🌍 View and download **public files** shared by others
+- 🔒 Private file protection with role-based access
+- 👤 Roles: Super Admin, Sub Admin, User
+- 📊 Simple dashboard summarizing user activity
+- 🔍 Search, filter, pagination, and status toggling
+- 📱 Responsive and user-friendly UI using **Bootstrap** and **Blade**
+- ✨ API authentication using **Laravel Sanctum**
 
+---
+
+## 🗄️ Screenshots
+
+### 🔐 Login & Registration
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/600693be-b64b-49a7-bbe8-0227c7c913c3" alt="Login Screen" /></td>
-    <td><img src="https://github.com/user-attachments/assets/ec84365a-0446-4021-b52e-265417e89714" alt="Registration Screen" /></td>
+    <td><img src="https://github.com/user-attachments/assets/600693be-b64b-49a7-bbe8-0227c7c913c3" alt="Login Screen" width="100%"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ec84365a-0446-4021-b52e-265417e89714" alt="Registration Screen" width="100%"/></td>
   </tr>
 </table>
 
 ---
 
-## Dashboard
-
+### 📊 Dashboard Overview
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/2a0951e7-8203-4581-a903-5393206d5d74"/></td>
+    <td><img src="https://github.com/user-attachments/assets/2a0951e7-8203-4581-a903-5393206d5d74" alt="Dashboard" width="100%"/></td>
   </tr>
 </table>
 
 ---
 
-## 📂 List Drives – View and Download Public Files
-
+### 📂 Drive Listing – Public Files
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/3fdfe030-35a3-4e29-bf1f-d80fc8eb8412" /></td>
-    <td><img src="https://github.com/user-attachments/assets/264de48c-759f-4b1d-bfbe-d9db68a2618d" /></td>
+    <td><img src="https://github.com/user-attachments/assets/3fdfe030-35a3-4e29-bf1f-d80fc8eb8412" alt="Drive List" width="100%"/></td>
+    <td><img src="https://github.com/user-attachments/assets/264de48c-759f-4b1d-bfbe-d9db68a2618d" alt="Public Files View" width="100%"/></td>
   </tr>
 </table>
 
 ---
-
-Swagger API Document : https://app.swaggerhub.com/apis/hazemkhairat-426/DriveApi/1.0.0
-
