@@ -30,20 +30,19 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        if($request->file() != null){
+        if ($request->file() != null) {
             $imageData = $request->file('image');
             $drive_name = rand(0, 200) . rand(0, 200) . $imageData->getClientOriginalName();
             $location = public_path('users');
             $imageData->move($location, $drive_name);
-        }
-        else{
+        } else {
             $drive_name = 'fake.jpg';
         }
-        
+
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -54,7 +53,7 @@ class RegisteredUserController extends Controller
             'image' => $drive_name
         ]);
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
         Auth::login($user);
 

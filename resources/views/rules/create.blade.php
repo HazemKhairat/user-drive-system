@@ -1,44 +1,51 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Add New Rule
-        </h2>
-    </x-slot>
+    <div class="container py-5">
+        <div class="mx-auto" style="max-width: 700px;">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <div class="container col-md-10">
-                        @if (Session::has('done'))
-                            <div class="alert alert-success">
-                                {{Session::get('done')}}
-                            </div>
-                        @endif
-                        <a class="btn btn-info" href="{{route('rule.index')}}">Back</a>
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <form action="{{route('rule.store')}}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="">Title</label>
-                                        <input type="text" name="title" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Description</label>
-                                        <input type="text" name="description" class="form-control">
-                                    </div>
-                                    <div class="d-grid col-md-6 my-4 mx-auto">
-                                        <button class="btn btn-info">
-                                         Create New Rule
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+            {{-- Page Header --}}
+            <div class="mb-4 border-bottom pb-3 d-flex justify-content-between align-items-center">
+                <h2 class="h4 fw-bold text-dark mb-0">
+                    <i class="fas fa-plus-circle text-success me-2"></i> Add New Role
+                </h2>
+                <a href="{{ route('rule.index') }}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left me-1"></i> Back
+                </a>
+            </div>
+
+            {{-- Flash Success Message --}}
+            @if (Session::has('done'))
+                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <div>{{ Session::get('done') }}</div>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            {{-- Create Rule Form --}}
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <form action="{{ route('rule.store') }}" method="POST">
+                        @csrf
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Enter role title" required>
                         </div>
-                    </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Description</label>
+                            <input type="text" name="description" class="form-control" placeholder="Enter role description" required>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button class="btn btn-success">
+                                <i class="fas fa-save me-1"></i> Create New Role
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
         </div>
     </div>
 </x-app-layout>

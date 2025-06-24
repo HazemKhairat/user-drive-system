@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DriveController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RuleController;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+ 
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -33,10 +34,13 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware('auth')->group(function () {
+
+    // User Routes
     Route::get('/error403', [UserController::class, 'error403'])->name('error403');
     Route::get('/listUsers', [UserController::class, 'index'])->name('listUsers')->middleware('superAdmin');
     Route::get('/edit_user_rule/{id}', [UserController::class, 'edit_user_rule'])->name('edit_user_rule')->middleware('superAdmin');
     Route::post('/update_rule/{id}', [UserController::class, 'update_rule'])->name('update_rule')->middleware('superAdmin');
+    Route::delete('/delete_user/{id}', [UserController::class, 'delete_user'])->name('delete_user')->middleware('superAdmin');
 
     // Drive Routes
     Route::prefix('drive')->name('drive.')->group(function () {
@@ -62,10 +66,14 @@ Route::middleware('auth')->group(function () {
             Route::post('/store', [RuleController::class, 'store'])->name('store');
             // function with id 
             Route::get('/edit/{id}', [RuleController::class, 'edit'])->name('edit');
-            Route::post('/update/{id}', [RuleController::class, 'update'])->name('update');
+            Route::put('/update/{id}', [RuleController::class, 'update'])->name('update');
             Route::get('/destroy/{id}', [RuleController::class, 'destroy'])->name('destroy');
         });
     });
+
+    // Dashboard Route
+    Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
 });
 
 

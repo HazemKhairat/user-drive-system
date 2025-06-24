@@ -1,0 +1,170 @@
+openapi: 3.0.0
+info:
+  title: DriveApi
+  version: 1.0.0
+servers:
+- url: http://localhost:8000
+paths:
+  /api/auth/login:
+    post:
+      summary: Login
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - email
+              - password
+      security:
+      - bearerAuth: []
+  /api/auth/register:
+    post:
+      summary: Register
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+                image:
+                  type: string
+              required:
+              - name
+              - email
+              - password
+              - password_confirmation
+              - image
+  /api/auth/logout:
+    post:
+      summary: Logout
+      responses:
+        '200':
+          description: Successful response
+      security:
+      - bearerAuth: []
+  /api/drive/store:
+    post:
+      summary: create_drive
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                file:
+                  type: string
+              required:
+              - title
+              - description
+              - file
+      security:
+      - bearerAuth: []
+  /api/drive/public:
+    get:
+      summary: get_publicFiles
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties: {}
+              required: []
+      security:
+      - bearerAuth: []
+  /api/drive/download/1:
+    get:
+      summary: download_drive
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties: {}
+              required: []
+      security:
+      - bearerAuth: []
+  /api/drive/change_status/1:
+    put:
+      summary: change_status
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties: {}
+              required: []
+      security:
+      - bearerAuth: []
+  /api/drive/update/1:
+    post:
+      summary: update_drive
+      responses:
+        '200':
+          description: Successful response
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                file:
+                  type: string
+              required:
+              - title
+              - description
+              - file
+      security:
+      - bearerAuth: []
+  /api/drive/delete/8:
+    post:
+      summary: delete_drive
+      responses:
+        '200':
+          description: Successful response
+      security:
+      - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

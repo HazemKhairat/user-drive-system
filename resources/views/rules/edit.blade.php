@@ -1,44 +1,52 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-           Edit Rule : {{$rule->title}}
-        </h2>
-    </x-slot>
+    <div class="container py-5">
+        <div class="mx-auto" style="max-width: 700px;">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <div class="container col-md-10">
-                        @if (Session::has('done'))
-                            <div class="alert alert-success">
-                                {{Session::get('done')}}
-                            </div>
-                        @endif
-                        <a class="btn btn-info" href="{{route('rule.index')}}">Back</a>
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <form action="{{route('rule.update', $rule->id)}}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="">Title</label>
-                                        <input type="text" value="{{$rule->title}}" name="title" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Description</label>
-                                        <input type="text" value="{{$rule->description}}"  name="description" class="form-control">
-                                    </div>
-                                    <div class="d-grid col-md-6 my-4 mx-auto">
-                                        <button class="btn btn-info">
-                                            Update Rule
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+            {{-- Page Header --}}
+            <div class="mb-4 border-bottom pb-3 d-flex justify-content-between align-items-center">
+                <h2 class="h4 fw-bold text-dark mb-0">
+                    <i class="fas fa-edit text-warning me-2"></i> Edit Role: {{ $rule->title }}
+                </h2>
+                <a href="{{ route('rule.index') }}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left me-1"></i> Back
+                </a>
+            </div>
+
+            {{-- Flash Message --}}
+            @if (Session::has('done'))
+                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <div>{{ Session::get('done') }}</div>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            {{-- Form Card --}}
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <form action="{{ route('rule.update', $rule->id) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Title</label>
+                            <input type="text" name="title" value="{{ $rule->title }}" class="form-control" required>
                         </div>
-                    </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Description</label>
+                            <input type="text" name="description" value="{{ $rule->description }}" class="form-control" required>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button class="btn btn-warning text-white fw-semibold">
+                                <i class="fas fa-save me-1"></i> Update Role
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
         </div>
     </div>
 </x-app-layout>

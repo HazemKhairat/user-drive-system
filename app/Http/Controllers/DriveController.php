@@ -8,21 +8,41 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class DriveController extends Controller
-
 {
-    public function publicDrive(){
+    public function publicDrive()
+    {
         $drives = DB::table('drives')->where('status', 'public')->paginate(5);
         return view('Drives.public', compact('drives'));
     }
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        // Get user id
         $user_id = auth()->user()->id;
-        $drives = DB::table('drives')->where('user_id', $user_id)->paginate(5);
+
+        // Get user by id
+        $query = DB::table('drives')->where('user_id', $user_id);
+
+        // Search with filters
+        if ($request->has('status') && in_array($request->status, ['public', 'private'])) {
+            $query->where('status', $request->status);
+        }
+
+        // Search with keyword
+        if ($request->has('search') && $request->search !== '') {
+            $query->where('title', 'LIKE', "%{$request->search}%");
+        }
+
+        // Apply query
+        $drives = $query->paginate(5)->appends($request->query());
+
+        // Render to drive page with final data
         return view('Drives.index', compact('drives'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -33,15 +53,15 @@ class DriveController extends Controller
     }
 
 
-    public function change_status($id){
+    public function change_status($id)
+    {
         $drive = DB::table('drives')->where('id', $id)->first();
         $status = $drive->status;
-        if($status == 'private'){
+        if ($status == 'private') {
             DB::table('drives')->where('id', $id)->update([
                 'status' => 'public'
             ]);
-        }
-        else{
+        } else {
             DB::table('drives')->where('id', $id)->update([
                 'status' => 'private'
             ]);
@@ -65,6 +85,7 @@ class DriveController extends Controller
             'file_type' => $drive_type,
             'user_id' => Auth::user()->id
         ]);
+
         return redirect()->back()->with("done", "Insert Successuflly");
     }
 
@@ -97,7 +118,7 @@ class DriveController extends Controller
         $drives = DB::table('drives')->where('id', $id)->first();
         $drive_data = $request->file("file");
         if ($drive_data == null) {
-            $drive_name =  $drives->file;
+            $drive_name = $drives->file;
             $drive_type = $drives->file_type;
         } else {
             $oldFile = $drives->file;
