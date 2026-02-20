@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
- 
+
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
 
     // User Routes
     Route::get('/error403', [UserController::class, 'error403'])->name('error403');
-    Route::get('/listUsers', [UserController::class, 'index'])->name('listUsers')->middleware('superAdmin');
+    Route::get('/listUsers', [UserController::class, 'index'])->name('listUsers');
     Route::get('/edit_user_rule/{id}', [UserController::class, 'edit_user_rule'])->name('edit_user_rule')->middleware('superAdmin');
     Route::post('/update_rule/{id}', [UserController::class, 'update_rule'])->name('update_rule')->middleware('superAdmin');
     Route::delete('/delete_user/{id}', [UserController::class, 'delete_user'])->name('delete_user')->middleware('superAdmin');
