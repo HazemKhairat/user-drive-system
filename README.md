@@ -68,5 +68,3 @@ It implements robust **authentication**, **authorization**, and **role-based acc
 
 ---
 
-## 🧩 Project Structure
-
